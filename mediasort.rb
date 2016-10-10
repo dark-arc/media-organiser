@@ -3,7 +3,7 @@ require_relative 'bootstrap'
 require 'thor'
 
 class MediaSort < Thor
-  desc 'Organise', "Rename media files with correct names"
+  desc 'organise', "Rename media files with correct names"
   def organise_movies(location, recursive=false)
     filemagic = FileMagic.new()
 
@@ -16,3 +16,5 @@ class MediaSort < Thor
     
   end
 end
+
+MediaSort.start(ARGV)
