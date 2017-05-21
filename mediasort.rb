@@ -25,7 +25,7 @@ class MediaSort < Thor
           puts "No results for #{file}"
           print "Title ([c]ancel):"
           basename = STDIN.gets
-          break if basename = 'c'
+	  break if basename == 'c'
         end
       end
     end
